@@ -9,7 +9,7 @@ export default defineConfig({
 	site: "https://spacestars.craftlions.workers.dev",
 	output: "server",
 	adapter: cloudflare({
-		imageService: { build: 'compile', runtime: 'cloudflare-binding' },
+		imageService: { build: "compile", runtime: "cloudflare-binding" },
 	}),
 	compressHTML: false,
 	experimental: {

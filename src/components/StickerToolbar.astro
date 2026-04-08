@@ -1,0 +1,98 @@
+---
+---
+
+<sticker-toolbar
+	class="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 animate-[float_4s_ease-in-out_infinite]"
+>
+	<div
+		class="flex gap-3 rounded-full border border-slate-400/20 bg-slate-900/70 px-5 py-3 shadow-[0_0_20px_rgba(99,102,241,0.15),0_0_60px_rgba(99,102,241,0.05)] backdrop-blur-xl"
+	>
+		<button
+			type="button"
+			class="flex size-12 cursor-pointer items-center justify-center rounded-full border border-slate-400/15 bg-slate-800/60 text-2xl transition-all duration-200 ease-out hover:scale-125 hover:bg-indigo-500/30 hover:shadow-[0_0_14px_rgba(99,102,241,0.4)] active:scale-95"
+			data-sticker="rocket"
+			>🚀</button
+		>
+		<button
+			type="button"
+			class="flex size-12 cursor-pointer items-center justify-center rounded-full border border-slate-400/15 bg-slate-800/60 text-2xl transition-all duration-200 ease-out hover:scale-125 hover:bg-indigo-500/30 hover:shadow-[0_0_14px_rgba(99,102,241,0.4)] active:scale-95"
+			data-sticker="star"
+			>⭐</button
+		>
+		<button
+			type="button"
+			class="flex size-12 cursor-pointer items-center justify-center rounded-full border border-slate-400/15 bg-slate-800/60 text-2xl transition-all duration-200 ease-out hover:scale-125 hover:bg-indigo-500/30 hover:shadow-[0_0_14px_rgba(99,102,241,0.4)] active:scale-95"
+			data-sticker="moon"
+			>🌙</button
+		>
+		<button
+			type="button"
+			class="flex size-12 cursor-pointer items-center justify-center rounded-full border border-slate-400/15 bg-slate-800/60 text-2xl transition-all duration-200 ease-out hover:scale-125 hover:bg-indigo-500/30 hover:shadow-[0_0_14px_rgba(99,102,241,0.4)] active:scale-95"
+			data-sticker="alien"
+			>👾</button
+		>
+		<button
+			type="button"
+			class="flex size-12 cursor-pointer items-center justify-center rounded-full border border-slate-400/15 bg-slate-800/60 text-2xl transition-all duration-200 ease-out hover:scale-125 hover:bg-indigo-500/30 hover:shadow-[0_0_14px_rgba(99,102,241,0.4)] active:scale-95"
+			data-sticker="satellite"
+			>🛰️</button
+		>
+	</div>
+</sticker-toolbar>
+
+<style>
+	@keyframes float {
+		0%,
+		100% {
+			transform: translateX(-50%) translateY(0);
+		}
+		50% {
+			transform: translateX(-50%) translateY(-6px);
+		}
+	}
+</style>
+
+<script>
+	// TODO
+
+	class StickerToolbar extends HTMLElement {
+		#client: AgentClient<SpaceAgent, SpaceState>;
+		#selectedClasses = [
+			"bg-indigo-500/50",
+			"border-indigo-300/50",
+			"shadow-[0_0_18px_rgba(99,102,241,0.6)]",
+			"scale-110",
+		];
+		#defaultClasses = ["bg-slate-800/60", "border-slate-400/15"];
+
+		constructor() {
+			super();
+
+			// TODO
+
+			this.querySelectorAll<HTMLButtonElement>("button").forEach((btn) => {
+				btn.addEventListener("click", () => {
+					const sticker = btn.dataset.sticker;
+					if (!sticker) return;
+
+					// TODO
+				});
+			});
+		}
+
+		#updateSelected(state: SpaceState) {
+			const currentSticker = state.users?.[this.#client.id]?.sticker;
+			this.querySelectorAll<HTMLButtonElement>("button").forEach((btn) => {
+				if (btn.dataset.sticker === currentSticker) {
+					btn.classList.remove(...this.#defaultClasses);
+					btn.classList.add(...this.#selectedClasses);
+				} else {
+					btn.classList.remove(...this.#selectedClasses);
+					btn.classList.add(...this.#defaultClasses);
+				}
+			});
+		}
+	}
+
+	customElements.define("sticker-toolbar", StickerToolbar);
+</script>
