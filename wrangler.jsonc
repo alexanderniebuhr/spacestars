@@ -2,9 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"account_id": "1dc7f5dfd6f1830ea5b903d051c6d624",
 	"compatibility_date": "2026-04-08",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
+	"compatibility_flags": ["nodejs_compat"],
 	"main": "./src/worker.ts",
 	"name": "spacestars",
 	"assets": {
@@ -41,5 +39,7 @@
 			"id": "7fd1c42ad9414b3780b73dc22a7023a9"
 		}
 	],
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	// TODO
+	"ai": { "binding": "AI", "remote": true }
 }

@@ -1,39 +1,40 @@
 {
-  "name": "spacestars",
-  "type": "module",
-  "license": "MIT",
-  "scripts": {
-    "astro": "astro",
-    "biome": "biome",
-    "dev": "astro dev",
-    "types": "wrangler types --include-runtime --include-env",
-    "check": "wrangler types --include-runtime --include-env --check && astro check",
-    "build": "astro build",
-    "preview": "astro build && astro preview",
-    "preview:wrangler": "astro build && wrangler dev",
-    "deploy": "astro build && wrangler deploy"
-  },
-  "devDependencies": {
-    "@astrojs/check": "0.9.8",
-    "@astrojs/cloudflare": "13.1.7",
-    "@astrojs/compiler-rs": "0.1.6",
-    "@astrojs/sitemap": "3.7.2",
-    "@biomejs/biome": "2.4.10",
-    "@cloudflare/vite-plugin": "1.31.1",
-    "@tailwindcss/vite": "4.2.2",
-    "@types/node": "25.5.2",
-    "@typescript/native-preview": "7.0.0-dev.20260407.1",
-    "astro": "6.1.4",
-    "browserslist": "4.28.2",
-    "lightningcss": "1.32.0",
-    "tailwindcss": "4.2.2",
-    "update-browserslist-db": "1.2.3",
-    "wrangler": "4.81.0"
-  },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "25.8.1"
-    }
-  }
+	"name": "spacestars",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"astro": "astro",
+		"biome": "biome",
+		"dev": "astro dev",
+		"types": "wrangler types --include-runtime --include-env",
+		"check": "wrangler types --include-runtime --include-env --check && astro check",
+		"build": "astro build",
+		"preview": "astro build && astro preview",
+		"preview:wrangler": "astro build && wrangler dev",
+		"deploy": "astro build && wrangler deploy"
+	},
+	"devDependencies": {
+		"@astrojs/check": "0.9.8",
+		"@astrojs/cloudflare": "13.1.7",
+		"@astrojs/compiler-rs": "0.1.6",
+		"@astrojs/sitemap": "3.7.2",
+		"@biomejs/biome": "2.4.10",
+		"@cloudflare/vite-plugin": "1.31.1",
+		"@tailwindcss/vite": "4.2.2",
+		"@types/node": "25.5.2",
+		"@typescript/native-preview": "7.0.0-dev.20260407.1",
+		"agents": "0.10.0",
+		"astro": "6.1.4",
+		"browserslist": "4.28.2",
+		"lightningcss": "1.32.0",
+		"tailwindcss": "4.2.2",
+		"update-browserslist-db": "1.2.3",
+		"wrangler": "4.81.0"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "25.8.1"
+		}
+	}
 }

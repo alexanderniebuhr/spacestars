@@ -1,0 +1,21 @@
+---
+// TODO
+---
+
+<div
+	id="astronauts"
+	class="fixed inset-0 w-screen h-screen pointer-events-none overflow-hidden z-0"
+>
+	{Object.values(users).map(sticker => (
+    <span
+      class="absolute inline-flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 select-none items-center justify-center rounded-full bg-white/90 text-3xl shadow-2xl"
+      style={`top: ${sticker.top}; left: ${sticker.left};`}
+    >
+      {sticker.sticker}
+    </span>
+  ))}
+</div>
+
+<script>
+	// TODO
+</script>
