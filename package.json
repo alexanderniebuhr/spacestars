@@ -1,5 +1,5 @@
 {
-  "name": "CHANGEME_PROJECT_NAME",
+  "name": "spacestars",
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -14,23 +14,22 @@
     "deploy": "astro build && wrangler deploy"
   },
   "devDependencies": {
-    "@astrojs/compiler-rs": "*",
-    "@biomejs/biome": "*",
-    "@tailwindcss/vite": "*",
-    "@types/node": "*",
-    "@typescript/native-preview": "*",
-    "tailwindcss": "*",
-    "update-browserslist-db": "*",
-    "@astrojs/check": "*",
-    "@cloudflare/vite-plugin": "*",
-    "@astrojs/cloudflare": "*",
-    "@astrojs/sitemap": "*",
-    "astro": "*",
-    "browserslist": "*",
-    "lightningcss": "*",
-    "wrangler": "*"
+    "@astrojs/check": "0.9.8",
+    "@astrojs/cloudflare": "13.1.7",
+    "@astrojs/compiler-rs": "0.1.6",
+    "@astrojs/sitemap": "3.7.2",
+    "@biomejs/biome": "2.4.10",
+    "@cloudflare/vite-plugin": "1.31.1",
+    "@tailwindcss/vite": "4.2.2",
+    "@types/node": "25.5.2",
+    "@typescript/native-preview": "7.0.0-dev.20260407.1",
+    "astro": "6.1.4",
+    "browserslist": "4.28.2",
+    "lightningcss": "1.32.0",
+    "tailwindcss": "4.2.2",
+    "update-browserslist-db": "1.2.3",
+    "wrangler": "4.81.0"
   },
-  "dependencies": {},
   "devEngines": {
     "runtime": {
       "name": "node",

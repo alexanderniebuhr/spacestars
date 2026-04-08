@@ -20,8 +20,12 @@ Update browserlist
 pn update-browserslist-db latest
 ```
 
-Deploy to cloudflare
-```zsh
-pnpm run deploy
+Generate types
+```
+pn types
 ```
 
+Deploy to cloudflare
+```zsh
+pn run deploy
+```
