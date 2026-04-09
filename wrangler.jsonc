@@ -40,6 +40,19 @@
 		}
 	],
 	"upload_source_maps": true,
-	// TODO
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "SpaceAgent",
+				"class_name": "SpaceAgent"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["SpaceAgent"]
+		}
+	],
 	"ai": { "binding": "AI", "remote": true }
 }

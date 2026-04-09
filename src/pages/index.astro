@@ -1,11 +1,10 @@
 ---
 export const prerender = true;
 
+import Astronauts from "../components/Astronauts.astro";
+import BackgroundImage from "../components/BackgroundImage.astro";
+import StickerToolbar from "../components/StickerToolbar.astro";
 import "../styles/global.css";
-
-// TODO
-// TODO
-// TODO
 ---
 
 <html lang="en">
@@ -24,10 +23,10 @@ import "../styles/global.css";
 		<link rel="sitemap" href="/sitemap-index.xml">
 	</head>
 	<body class="relative min-h-screen overflow-hidden bg-[#070529] text-white">
-		<!-- TODO -->
+		<BackgroundImage />
 		<div class="relative z-10">
-			<!-- TODO -->
-			<!-- TODO -->
+			<Astronauts server:defer />
+			<StickerToolbar />
 		</div>
 	</body>
 </html>

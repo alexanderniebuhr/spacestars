@@ -10,10 +10,10 @@
 </button>
 
 <script>
-	// TODO
+	import { actions } from "astro:actions";
 
 	const button = document.getElementById("reset");
 	button?.addEventListener("click", async () => {
-		// TODO
+		await actions.reset();
 	});
 </script>

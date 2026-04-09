@@ -53,7 +53,8 @@
 </style>
 
 <script>
-	// TODO
+	import type { SpaceAgent, SpaceState } from "../worker";
+	import { AgentClient } from "agents/client";
 
 	class StickerToolbar extends HTMLElement {
 		#client: AgentClient<SpaceAgent, SpaceState>;
@@ -68,14 +69,29 @@
 		constructor() {
 			super();
 
-			// TODO
+			this.#client = new AgentClient<SpaceAgent, SpaceState>({
+				host: window.location.origin,
+				agent: "SpaceAgent",
+				onStateUpdate: (state) => {
+					this.#updateSelected(state);
+				},
+			});
 
 			this.querySelectorAll<HTMLButtonElement>("button").forEach((btn) => {
 				btn.addEventListener("click", () => {
 					const sticker = btn.dataset.sticker;
 					if (!sticker) return;
 
-					// TODO
+					this.#client.setState({
+						users: {
+							...this.#client.state?.users,
+							[this.#client.id]: {
+								sticker,
+								top: `${Math.random() * 85 + 5}%`,
+								left: `${Math.random() * 85 + 5}%`,
+							},
+						},
+					});
 				});
 			});
 		}
