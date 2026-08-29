@@ -25,7 +25,7 @@
 		"@typescript/native-preview": "7.0.0-dev.20260407.1",
 		"agents": "0.10.0",
 		"astro": "6.1.4",
-		"browserslist": "4.28.2",
+		"browserslist": "4.28.8",
 		"lightningcss": "1.32.0",
 		"tailwindcss": "4.2.2",
 		"update-browserslist-db": "1.2.3",
