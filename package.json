@@ -24,7 +24,7 @@
 		"@types/node": "25.5.2",
 		"@typescript/native-preview": "7.0.0-dev.20260407.1",
 		"agents": "0.10.0",
-		"astro": "6.1.4",
+		"astro": "7.1.0",
 		"browserslist": "4.28.2",
 		"lightningcss": "1.32.0",
 		"tailwindcss": "4.2.2",
