@@ -21,7 +21,7 @@
 		"@biomejs/biome": "2.4.10",
 		"@cloudflare/vite-plugin": "1.31.1",
 		"@tailwindcss/vite": "4.2.2",
-		"@types/node": "25.5.2",
+		"@types/node": "25.9.5",
 		"@typescript/native-preview": "7.0.0-dev.20260407.1",
 		"agents": "0.10.0",
 		"astro": "6.1.4",
